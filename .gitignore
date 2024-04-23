@@ -1,0 +1,9 @@
+.DS_Store
+.mvn
+.idea
+.springBeans
+target
+.gradle
+gradle
+build
+volume

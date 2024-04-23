@@ -1,0 +1,16 @@
+[
+  {
+    "_id": {
+      "$oid": "65bfe68eb8104815f01c59f6"
+    },
+    "name": "canecas",
+    "code": 1
+  },
+  {
+    "_id": {
+      "$oid": "65bfe68eb8104815f01c59f7"
+    },
+    "name": "camisetas",
+    "code": 2
+  }
+]

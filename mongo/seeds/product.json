@@ -1,0 +1,27 @@
+[
+  {
+    "_id": {
+      "$oid": "65bfe68fb8104815f01c59f8"
+    },
+    "name": "Xícara Dev",
+    "description": "Xícara com logo dev de 200ml",
+    "active": true,
+    "price": "30.10",
+    "date": "2024:01:30T11:00:10.100",
+    "image": "images/caneca1.jpg",
+    "stock": "5",
+    "dimensions": {
+      "height": "1",
+      "width": "1",
+      "depth": "1"
+    },
+    "categories": [
+      {
+        "$oid": "65bfe68eb8104815f01c59f6"
+      },
+      {
+        "$oid": "65bfe68eb8104815f01c59f7"
+      }
+    ]
+  }
+]

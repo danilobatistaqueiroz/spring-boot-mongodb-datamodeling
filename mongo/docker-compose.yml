@@ -1,0 +1,52 @@
+version: '3'
+
+services:
+  mongodb-express:
+    image: mongo-express
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_BASICAUTH_USERNAME: nerd
+      ME_CONFIG_BASICAUTH_PASSWORD: nerd
+      ME_CONFIG_MONGODB_PORT: 27017
+      ME_CONFIG_MONGODB_ENABLE_ADMIN: 'true'
+      ME_CONFIG_MONGODB_SERVER: 'mongodb'
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: 123456
+    links:
+      - mongodb
+    restart: always
+    depends_on:
+      - mongodb
+    networks:
+      - mongodb-compose-network
+
+  mongodb:
+    image: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: 123456
+    ports:
+      - "27017:27017"
+    volumes:
+      - ${PWD}/volume:/data/db
+    networks:
+      - mongodb-compose-network
+
+  mongodb-seed:
+    image: mongo
+    links:
+      - mongodb
+    depends_on:
+      - mongodb
+    networks:
+      - mongodb-compose-network
+    volumes:
+      - ${PWD}/scripts:/mongo/scripts
+      - ${PWD}/seeds:/mongo/seeds
+    command:
+      /mongo/scripts/import.sh
+
+networks: 
+    mongodb-compose-network:
+      driver: bridge
