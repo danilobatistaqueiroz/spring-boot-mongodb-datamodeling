@@ -18,7 +18,7 @@ But MongoDB has some advantages over relational databases:
 * Tables from relation databases have an impedance to objects from systems, generally this problem is attenuated using ORMs, but this isn't solve the problem, using a document database as MongoDB, the structure of document can reflect the object from your system.
 * Sharding - MongoDB is designed to work well with sharding, it's easy to implement:  
  https://www.percona.com/blog/an-overview-of-sharding-in-postgresql-and-how-it-relates-to-mongodbs/
-* The schemaless or flexible schema nature is a great advantage on projects that the data structure changes over time, when using relational database to has a change in the table, the developer needs to get an approval from database administrators and generally this is a slow process. 
+* The schemaless or flexible schema nature is a great advantage on projects that the data structure changes over time, when using relational database to has a change in the table, the developer needs to get an approval from database administrators and meanwhile the change happens the database is stopped. 
 
 ## Sharding
 
