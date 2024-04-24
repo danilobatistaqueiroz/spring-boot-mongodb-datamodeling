@@ -12,7 +12,8 @@
 
 In many cases a relational database is a great option, or maybe the best one.  
 But MongoDB has some advantages over relational databases:
-* MongoDB uses javascript to query and to manipulate data, the data format used is based on JSON, this enables a smooth integration between systems using JSON and javascript.  
+* MongoDB uses javascript to query and to manipulate data, the data format used is based on JSON, this enables a smooth integration between systems using JSON and javascript.
+* Mobile applications 
 * The nature of Content Management, Collect of High Traffic Data, Blog, Chat, Ticket systems have dynamic data fitting very well with noSQL databases.  
 * Ecommerce systems get the benefit of using aggregates, instead of creating auxiliary tables for properties that varies depending on the type of product, you can use embedded documents that can have many formats.  
 * Tables from relation databases have an impedance to objects from systems, generally this problem is attenuated using ORMs, but this isn't solve the problem, using a document database as MongoDB, the structure of document can reflect the object from your system.
